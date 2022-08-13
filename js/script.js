@@ -275,7 +275,11 @@ var swiper = new Swiper(".mySwiper", {
     breakpoints: {
         0: {
             slidesPerGroup: 2,
-            slidesPerView: 3,
+            slidesPerView: 2,
+        },
+        500: {
+            slidesPerGroup: 2,
+            slidesPerView: 3
         },
         800: {
 
@@ -290,6 +294,18 @@ var swiper2 = new Swiper(".mySwiper2", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        0: {
+            slidesPerGroup: 3,
+            loop: true,
+            slidesPerView: 2,
+        },
+        600: {
+            slidesPerGroup: 3,
+            slidesPerView: 3,
+            loop: false
+        },
+    }
 });
 var swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: 6,
@@ -301,12 +317,25 @@ var swiper3 = new Swiper(".mySwiper3", {
     },
     breakpoints: {
         0: {
-            slidesPerGroup: 3,
+            slidesPerGroup: 2,
             spaceBetween: 20,
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
-        800: {
-
+        600: {
+            slidesPerGroup: 3,
+            slidesPerView: 3,
         },
     }
 });
+
+
+let logo = document.querySelector('.click-logo')
+let aside = document.querySelector('.aside')
+let asideLink = document.querySelectorAll('.aside__link')
+
+
+logo.addEventListener('click', function () {
+    console.log('Success')
+    aside.style.transform = 'translateY(0)'
+})
+
