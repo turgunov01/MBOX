@@ -338,4 +338,13 @@ logo.addEventListener('click', function () {
     console.log('Success')
     aside.style.transform = 'translateY(0)'
 })
+logo.addEventListener('dblclick', function () {
+    console.log('Mouse Out')
+    aside.style.transform = 'translateY(-1000%)'
+})
 
+for (let i = 0; i < asideLink.length; i++) {
+    asideLink[i].addEventListener('click', function () {
+        location.reload()
+    })
+}
